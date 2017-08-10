@@ -11,9 +11,11 @@ let operatorBS = document.querySelectorAll('.operators');
 operatorBS.forEach(function(operbttns) {
     operbttns.addEventListener('click',
     function(event) {
+
         let keypressed = event.path[0].textContent;
+
           if (keypressed === '+' || keypressed === '-' || keypressed === '*' || keypressed === '/' || keypressed === '%'){ document.querySelector('.output').innerHTML += operbttns.value
-        } else if (keypressed === 'c') {
+        } else if (keypressed === 'C') {
             document.querySelector('.output').innerHTML = ''
         } else{
             let result = eval(document.querySelector('.output').innerHTML);
@@ -21,6 +23,9 @@ operatorBS.forEach(function(operbttns) {
         }
     })
 })
+
+// let outPutHookUP = document.querySelector('.output');
+
 
 
 //

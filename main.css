@@ -1,11 +1,14 @@
 html {
   background-image: url(gilbertthegayspider.png);
-  background-repeat: round space;
+  background-repeat: repeat-y repeat-x;
+  background-size: 100px;
+  background-clip: padding-box;
+  display: flex;
+  align-content: center;
 }
 body {
   background-color: white;
-  margin:0 25%;
-
+  margin:26% 17%;
 
 }
 #wrapper{
@@ -16,8 +19,8 @@ body {
 
 }
 #inputoperators{
+  min-width: 266px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   background:linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
 
@@ -38,7 +41,7 @@ section#numberss button{
 }
 button {
   margin 2%;
-  font-size: 3em;
+  font-size: 3rem;
   font-family: 'Erica One', cursive;
 }
 .row1, .row2, .row3, .row4, .row5   {
@@ -72,6 +75,25 @@ section#operatorss{
 }
 #operator6 {
   width=100%
+}
+
+@media screen and (min-width: 500px){
+
+body {
+    margin: 26% 25%;
+
+}
+#inputoperators{
+  .min-width: 380px;
+  padding: 3%;
+}
+}
+
+@media screen and (min-width: 600px){
+
+body {
+    margin: 26% 25%;
+
 }
 
 /*#operators{
