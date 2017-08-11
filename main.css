@@ -1,10 +1,11 @@
 html {
-  background-image: url(gilbertthegayspider.png);
+  background-image: url(gilbertthedancingspider.gif);
   background-repeat: repeat-y repeat-x;
   background-size: 100px;
   background-clip: padding-box;
   display: flex;
   align-content: center;
+  /*background-color: #ff5683;*/
 }
 body {
   background-color: white;
@@ -15,8 +16,9 @@ body {
   background-color: rebeccapurple;
   border: 5px solid black;
 
-
-
+}
+button:hover{
+  border:2px solid black;
 }
 #inputoperators{
   min-width: 266px;
@@ -80,7 +82,7 @@ section#operatorss{
 @media screen and (min-width: 500px){
 
 body {
-    margin: 26% 25%;
+    margin: 17% 25%;
 
 }
 #inputoperators{
@@ -92,7 +94,7 @@ body {
 @media screen and (min-width: 600px){
 
 body {
-    margin: 26% 25%;
+    margin: 17% 25%;
 
 }
 

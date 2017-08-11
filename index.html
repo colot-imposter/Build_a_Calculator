@@ -12,7 +12,7 @@
 
 <body>
   <div class="wrapper" id="wrapper">
-    <div class="output">
+    <div class="output" id="output">
 
     </div>
     <div id="inputoperators" class="inputoperators">
@@ -34,7 +34,7 @@
         </div>
         <div class="row4">
 
-          <button data-key='48' class="numbers" type="button" id="number0" value="9">0</button>
+          <button data-key='48' class="numbers" type="button" id="number0" value="0">0</button>
           <button data-key='190' class="operators" type="button" id="operator5" value=".">.</button>
           <button data-key='67' class="operators" type="button" id="clearButton" value="C">C</button>
         </div>
@@ -47,51 +47,52 @@
 
         <button data-key='191' class="operators" type="button" id="operator1" value="/">/</button>
         <button data-key='56' class="operators" type="button" id="operator2" value="*">*</button>
-        <button data-key='187' class="operators" type="button" id="operator3" value="+">+</button>
+        <button data-key='107' class="operators" type="button" id="operator3" value="+">+</button>
         <button data-key='189' class="operators" type="button" id="operator4" value="-">-</button>
         <button data-key='53' class="operators" type="button" id="Module" value="%">%</button>
       </section>
     </div>
 
-<audio  data-key='49'  class= "audiotag" src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='50'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='51'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='52'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='53'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='54'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='55'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='56'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='57'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='48'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
+<audio  data-key='49'  src="NumberSounds/GB_numbers_1.mp3"></audio>
+<audio  data-key='50'  src="NumberSounds/GB_numbers_2.mp3"></audio>
+<audio  data-key='51'  src="NumberSounds/GB_numbers_3.mp3"></audio>
+<audio  data-key='52'  src="NumberSounds/GB_numbers_4.mp3"></audio>
+<audio  data-key='53'  src="NumberSounds/GB_numbers_5.mp3"></audio>
+<audio  data-key='54'  src="NumberSounds/GB_numbers_6.mp3"></audio>
+<audio  data-key='55'  src="NumberSounds/GB_numbers_7.mp3"></audio>
+<audio  data-key='56'  src="NumberSounds/GB_numbers_8.mp3"></audio>
+<audio  data-key='57'  src="NumberSounds/GB_numbers_9.mp3"></audio>
+<audio  data-key='48'  src="NumberSounds/GB_numbers_0.mp3"></audio>
 <audio  data-key='190' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='67'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='187' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='191' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='56'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
-<audio  data-key='187' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
+<audio  data-key='107' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='189' src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 <audio  data-key='53'  src="I Cant Take It Anymore  Iago Aladdin.mp3"></audio>
 
-      </audio>
-    <script type="text/javascript">
+
+<script type="text/javascript">
       window.addEventListener('keydown', function(e) {
-        console.log(e.keyCode);
+
         const KEYDOWN = document.querySelector(`button[data-key='${e.keyCode}']`);
-        console.log(KEYDOWN);
         const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-        console.log(audio+ "this is audiooooooopoeeepe");
-        let outPutter = document.querySelector('.output').innerHTML;
-        outPutter += KEYDOWN.value
-          if (value==="C"){
-            outPut = ""
-          }
+        let outPutter = document.querySelector('.output');
+        outPutter.textContent += KEYDOWN.value;
+console.log('hfhdfhfjdfjhdfhjhdf' +outPutter.textContent.length);
+
+
+        // let equalMath = document.getElementById('output').value;
+        // document.querySelector('.output').value = eval(equalMath);
+        // letEquals.textContent = KEYDOWN.value;
+
+
           if (!audio) return;
-        // KEYDOWN.CurrentTime = 0;
         audio.CurrentTime = 0;
-        audio.play()
-        // KEYDOWN
+        audio.play();
       })
-    </script>
+</script>
 
   </div>
 
